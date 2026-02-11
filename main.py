@@ -8,7 +8,10 @@ app = FastAPI(title="VisionSafe Road Risk API")
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://lemon-ground-053dab000.2.azurestaticapps.net/"],
+    allow_origins=[
+        "http://localhost:5500",  # local testing
+        "https://lemon-ground-053dab000.2.azurestaticapps.net"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
